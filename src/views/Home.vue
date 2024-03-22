@@ -1,6 +1,8 @@
 <template>
   <div class="home">
-    <Toast v-if="showToast" />
+    <transition name="toast">
+      <Toast v-if="showToast" />
+    </transition>
     <Todos @badValue="triggerToast" />
     <transition name="fade">
       <div id='pop' v-if="showP">You can do it!</div>
@@ -52,6 +54,29 @@ export default {
   #pop{
     margin-bottom: 5px;
     color: #00A7E1
+  }
+  .toast-enter-from {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+   .toast-enter-to {
+    opacity: 1;
+    transform: translateY(0);
+  } 
+  .toast-enter-active {
+    transition: all 0.3s ease;
+  }
+
+ .toast-leave-from {
+    opacity: 1;
+    transform: translateY(0);
+  } 
+  .toast-leave-to {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+  .toast-leave-active {
+    transition: all 0.3s ease;
   }
 button{
   border-radius: 15px;
