@@ -37,13 +37,13 @@ export default {
       )
     }
     const afterEnter = (el) => {
-      el.style.color = 'blue'
+      el.style.color = 'orange'
       console.log('after enter', el)
 
       setTimeout(() => showTitle.value = false, 2000)
     }
     const beforeLeave = (el) => {
-      el.style.color = "orange"
+      el.style.color = "blue"
       console.log('before leave', el)
     }
     const leave = (el) => {
