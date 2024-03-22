@@ -17,16 +17,24 @@
 
 <script>
 import { ref } from 'vue'
-
+import gsap from 'gsap'
 export default {
   setup() {
     const showTitle = ref(true)
 
     const beforeEnter = (el) => {
-      console.log('before enter', el)
+      el.style.opacity = 0
+      el.style.transform = 'translateY(-60px)'
     }
-    const enter = (el) => {
-      console.log('enter', el)
+    const enter = (el, done) => {
+      gsap.to(el, {
+        duration: 1,
+      y:0,
+      opacity:1,
+      ease:'bounce.out',
+      onComplete: done
+      }
+      )
     }
     const afterEnter = (el) => {
       el.style.color = 'blue'

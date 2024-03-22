@@ -25,8 +25,7 @@ import { ref } from 'vue'
 export default {
   setup(props, { emit }) {
     const todos = ref([
-      { text: 'make the bed', id: 1 },
-      { text: 'play video games', id: 2 },
+      { text: 'Example todo', id: 1 },
     ])
     const newTodo = ref('')
 
