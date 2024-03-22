@@ -61,6 +61,7 @@ export default {
     border-radius: 10px;
     box-sizing: border-box;
     margin-bottom: 20px;
+    color:#00A7E1;
   }
   .todos ul {
     position: relative;

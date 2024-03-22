@@ -45,7 +45,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
   .contact ul {
     padding: 0;
     display: grid;
@@ -62,5 +62,8 @@ export default {
     box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
     cursor: pointer;
     line-height: 1.5em;
+  }
+  h1{
+    color:#00A7E1;
   }
 </style>
