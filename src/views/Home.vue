@@ -55,16 +55,8 @@ export default {
     margin-bottom: 5px;
     color: #00A7E1
   }
-  .toast-enter-from {
-    opacity: 0;
-    transform: translateY(-60px);
-  }
-   .toast-enter-to {
-    opacity: 1;
-    transform: translateY(0);
-  } 
   .toast-enter-active {
-    transition: all 0.3s ease;
+    animation: wobble 0.6s ease
   }
 
  .toast-leave-from {
@@ -77,6 +69,16 @@ export default {
   }
   .toast-leave-active {
     transition: all 0.3s ease;
+  }
+
+  @keyframes wobble {
+    0% {  transform: translateY(-60px); opacity:0}
+    50% {  transform: translateY(0px); opacity:1}
+    60% {  transform: translateX(10px); }
+    70% {  transform: translateX(-10px); }
+    80% {  transform: translateX(8px); }
+    90% {  transform: translateX(-8px); }
+    100% {  transform: translateX(0)}
   }
 button{
   border-radius: 15px;
